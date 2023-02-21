@@ -1,5 +1,5 @@
 name: ci-node-workflow
-on: [push]
+on: [pull_request]
 jobs:
   check-application:
     runs-on: ubuntu-latest
@@ -10,4 +10,3 @@ jobs:
           node-version: 16
       - run: npm install
       - run: npm test
-      - run: npm run
